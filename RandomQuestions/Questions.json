@@ -1,0 +1,85 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What does AD stand for in relation to Windows Operating Systems? ",
+      "correct_answer": "Active Directory",
+      "incorrect_answers": [ "Alternative Drive", "Automated Database", "Active Department" ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Nvidia&#039;s headquarters are based in which Silicon Valley city?",
+      "correct_answer": "Santa Clara",
+      "incorrect_answers": [ "Palo Alto", "Cupertino", "Mountain View" ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "While Apple was formed in California, in which western state was Microsoft founded?",
+      "correct_answer": "New Mexico",
+      "incorrect_answers": [ "Washington", "Colorado", "Arizona" ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "How many cores does the Intel i7-6950X have?",
+      "correct_answer": "10",
+      "incorrect_answers": [ "12", "8", "4" ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the name of the default theme that is installed with Windows XP?",
+      "correct_answer": "Luna",
+      "incorrect_answers": [ "Neptune", "Whistler", "Bliss" ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which operating system was released first?",
+      "correct_answer": "Mac OS",
+      "incorrect_answers": [ "Windows", "Linux", "OS\/2" ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What does the term GPU stand for?",
+      "correct_answer": "Graphics Processing Unit",
+      "incorrect_answers": [ "Gaming Processor Unit", "Graphite Producing Unit", "Graphical Proprietary Unit" ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the main CPU is the Sega Mega Drive \/ Sega Genesis?",
+      "correct_answer": "Motorola 68000",
+      "incorrect_answers": [ "Zilog Z80", "Yamaha YM2612", "Intel 8088" ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of these people was NOT a founder of Apple Inc?",
+      "correct_answer": "Jonathan Ive",
+      "incorrect_answers": [ "Steve Jobs", "Ronald Wayne", "Steve Wozniak" ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "When did the online streaming service &quot;Mixer&quot; launch?",
+      "correct_answer": "2016",
+      "incorrect_answers": [ "2013", "2009", "2011" ]
+    }
+  ]
+}
