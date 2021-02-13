@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+//using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -107,7 +107,7 @@ namespace TPL
             #endregion
 
             #region Queue
-            Queue q = new Queue();
+            Queue<int> q = new Queue<int>();
 
             q.Enqueue(1);
             q.Enqueue(2);

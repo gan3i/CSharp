@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DesignPatterns
 {
-    class Program
+    class OpenClosed
     {
         public enum Color
         {
@@ -29,8 +29,15 @@ namespace DesignPatterns
                 this.Name = name;
                 this.Size = size;
                 this.Color = color;
+
             }
+            public override string ToString()
+            {
+                return $"Product name is {this.Name}";
+            }
+
         }
+
 
         public interface ISpecification<T>
         {
@@ -120,7 +127,7 @@ namespace DesignPatterns
              {
                 new Product("Apple", Color.Green, Size.Small),
                 new Product("Tree", Color.Green, Size.Large),
-                new Product("Tree", Color.Blue, Size.Large)
+                new Product("House", Color.Blue, Size.Large)
              };
             var bf = new BetterFilter();
             foreach (var p in bf.Filter(products,
@@ -128,7 +135,7 @@ namespace DesignPatterns
             {
                 Console.WriteLine($"name : {p.Name}");
             }
-            foreach (var p in bf.Filter(products,new ColorSpecification(Color.Green)))
+            foreach (var p in bf.Filter(products, new ColorSpecification(Color.Green)))
             {
                 Console.WriteLine($"name : {p.Name}");
             }
