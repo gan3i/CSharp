@@ -8,6 +8,8 @@ namespace Threads
         static void Main(string[] args)
         {
             MonitorDemo.Run();
+            //var obj = new LockDemo();
+            //obj.Run();
             LockDemo.Run();
         }
 

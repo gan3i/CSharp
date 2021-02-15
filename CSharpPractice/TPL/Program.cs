@@ -17,38 +17,38 @@ namespace TPL
             int b = Convert.ToInt32((string)null);
             int c = 0;
 
-
             string s = "508";
 
             int i = Convert.ToInt32(s);
 
             byte[] x =  Encoding.ASCII.GetBytes("AB");
-            
+            byte[] utf =  Encoding.UTF8.GetBytes("AB");
+
             string y = Encoding.ASCII.GetString(x);
 
             char[] z = Encoding.ASCII.GetChars(x);
 
-            //char c =(char) "A";
+            //char chr =(char) "A";
+            char chr = 'A';
 
             //int val = (int)"A";
+            int val = (int)'A';
 
 
-            GenericCollection gc = new GenericCollection();
+            GC.Collect();
 
-            gc.Start();
+
+            //PlayWithThreads pt = new PlayWithThreads();
+
+            //pt.Start();
+
+            //PlayWithTasks pTasks = new PlayWithTasks();
+
+            //await pTasks.Start();
 
             PlayWithSemaSlim pSlim = new PlayWithSemaSlim();
 
             pSlim.Start();
-
-            PlayWithTasks pTasks = new PlayWithTasks();
-
-            await pTasks.Start();
-
-
-            PlayWithThreads pt = new PlayWithThreads();
-
-            pt.Start();
 
 
             BitArray bt = new BitArray(8);

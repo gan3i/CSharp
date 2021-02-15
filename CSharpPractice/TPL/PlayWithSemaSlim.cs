@@ -26,17 +26,16 @@ namespace TPL
             {
                 Task t = Task.Run(() =>
                 {
-                // Each task begins by requesting the semaphore.
-                Console.WriteLine("Task {0} begins and waits for the semaphore.",
-                                      Task.CurrentId);
+                    // Each task begins by requesting the semaphore.
+                    Console.WriteLine("Task {0} begins and waits for the semaphore.", Task.CurrentId);
                     semaphore.Wait();
 
                     Interlocked.Add(ref padding, 100);
 
                     Console.WriteLine("Task {0} enters the semaphore.", Task.CurrentId);
 
-                // The task just sleeps for 1+ seconds.
-                Thread.Sleep(1000 + padding);
+                    // The task just sleeps for 1+ seconds.
+                    Thread.Sleep(1000 + padding);
 
                     Console.WriteLine("Task {0} releases the semaphore; previous count: {1}.",
                                       Task.CurrentId, semaphore.Release());

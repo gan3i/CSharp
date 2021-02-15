@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 
 namespace TPL
@@ -17,7 +18,7 @@ namespace TPL
 		{
 			Console.WriteLine("In Main Thread");
 			ThreadPool.QueueUserWorkItem(CallBack);
-			Thread.Sleep(10000);
+			Thread.Sleep(1000);
 			ThreadStart threadCall = new ThreadStart(CallToChildThread);
 			ThreadStart threadCall2 = new ThreadStart(CallToChildThread2);
 			Thread newThread = new Thread(threadCall);
@@ -25,21 +26,23 @@ namespace TPL
 
 			//ThreadStart threadCall = new ThreadStart(CallToChildThread);
 			//ThreadStart threadCall2 = new ThreadStart(CallToChildThread2);
-			using (SemaphoreSlim sm = new SemaphoreSlim(1, 5))
+			using (SemaphoreSlim sm = new SemaphoreSlim(1, 3))
 			{
-				for (int i = 0; i < 15; i++)
+				Parallel.For(0, 20, x =>
 				{
-					//Console.WriteLine("Semaphore wait");
+					Console.WriteLine("Semaphore wait");
 					sm.Wait();
 					Thread.Sleep(2000);
-					Console.WriteLine(sm.CurrentCount);
 
 					newThread = new Thread(threadCall);
 					newThread2 = new Thread(threadCall2);
 					newThread.Start();
 					newThread2.Start();
+					Console.WriteLine(sm.CurrentCount);
 					sm.Release();
-				}
+					Console.WriteLine("Semaphore  Release");
+
+				});
 			}
 
 

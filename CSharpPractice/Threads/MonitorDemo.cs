@@ -24,10 +24,10 @@ namespace Threads
         }
         public static void Run()
         {
-            Thread[] threads = new Thread[3];
+            List<Thread> threads = new List<Thread>();
             for (int i =0; i < 3; i++)
             {
-                threads[i] = new Thread(new ThreadStart(PrintNumbers));
+                threads.Append(new Thread(new ThreadStart(PrintNumbers)));
                 threads[i].Name = "Thread" + i;
             }
             foreach(Thread t in threads)

@@ -1,10 +1,6 @@
 ﻿using System;
-//using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace TPL
 {
@@ -25,8 +21,11 @@ namespace TPL
             dict[2] = "Hey";
             dict[1] = "Hey again";
            
-
+            
             dict.Remove(1);
+            dict.Add(4, "four");
+            dict.Append(new KeyValuePair<int, string>(5, "five"));
+            dict.Contains(new KeyValuePair<int, string>(5, "five"));
 
             foreach (KeyValuePair<int, string> kv in dict)
             {
@@ -38,26 +37,6 @@ namespace TPL
             {
 
             }
-            #endregion
-
-            #region Hashtable
-            Hashtable ht = new Hashtable();
-
-            ht[1] = "Hey1";
-            ht[2] = "Hey2";
-            ht["s"] = "Hey2";
-            ht.Remove(1);
-            foreach(DictionaryEntry d in ht)
-            {
-                string s =(string) ht[1];
-                Console.WriteLine(d.Key + " " + d.Value + " " + ht.Count);
-
-            }
-            if (ht.ContainsKey(1))
-            {
-                   
-            }
-
             #endregion
 
             #region HashSet
@@ -85,6 +64,11 @@ namespace TPL
             for (int i = 0; i < lst.Count; i++)
             {
                 Console.WriteLine("printing List"+" "+lst[i]);
+            }
+
+            foreach(int i in lst)
+            {
+                Console.WriteLine("Printing Inside Foreach");
             }
             lst.Remove(1);
 
@@ -124,7 +108,6 @@ namespace TPL
             #region LinkedList
             LinkedList<int> ll = new LinkedList<int>();
 
-
             ll.AddFirst(1);
             ll.AddLast(2);
             ll.AddLast(3);
@@ -132,7 +115,6 @@ namespace TPL
             ll.RemoveLast();
             int first = ll.First();
             int last = ll.Last();
-
 
             #endregion
 
