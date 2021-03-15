@@ -8,6 +8,14 @@ namespace DataStructure
         {
             Console.WriteLine("Hello World!");
 
+            //JustCollections j = new JustCollections();
+
+            //j.Start();
+
+            GenericCollection k = new GenericCollection();
+
+            k.Start();
+
             Reading[] readings = new Reading[2];
 
             readings[0] = new Reading();

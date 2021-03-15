@@ -21,6 +21,7 @@ namespace TPL
             });
 
             Task taskTwo = taskOne.ContinueWith(t => {
+                Console.WriteLine(t.Status);
                 Console.WriteLine("Task 2 started");
                 Thread.Sleep(3000);
                 Console.WriteLine("Task 2 ended");

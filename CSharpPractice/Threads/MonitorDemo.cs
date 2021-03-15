@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 
 namespace Threads
 {
-    public static class MonitorDemo
+    public  class MonitorDemo
     {
-        static readonly object _object = new object();
+        private readonly object _object = new object();
 
-        private static void PrintNumbers()
+        private void PrintNumbers()
         {
             Monitor.Enter(_object);
                 for (int i = 0; i <5; i++)
@@ -22,7 +20,7 @@ namespace Threads
             Console.WriteLine();
             Monitor.Exit(_object);
         }
-        public static void Run()
+        public  void Run()
         {
             List<Thread> threads = new List<Thread>();
             for (int i =0; i < 3; i++)

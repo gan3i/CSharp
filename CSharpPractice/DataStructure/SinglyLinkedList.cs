@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace DataStructure
 {
@@ -44,6 +45,9 @@ namespace DataStructure
         /// Number of elements in the list or 0 if empty
         /// </summary>
         public int Count { get; private set; }
+
+        public bool IsReadOnly => throw new NotImplementedException();
+
         /// <summary>
         /// to add new node to the linked list
         /// </summary>
@@ -56,6 +60,36 @@ namespace DataStructure
             {
                 this.Head = newNode;
             }
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Contains(T item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CopyTo(T[] array, int arrayIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Remove(T item)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

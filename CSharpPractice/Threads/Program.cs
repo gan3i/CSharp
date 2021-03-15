@@ -7,10 +7,10 @@ namespace Threads
     {
         static void Main(string[] args)
         {
-            MonitorDemo.Run();
-            //var obj = new LockDemo();
-            //obj.Run();
-            LockDemo.Run();
+            MonitorDemo monObj = new MonitorDemo();
+            monObj.Run();
+            var obj = new LockDemo();
+            obj.Run();
         }
 
     }

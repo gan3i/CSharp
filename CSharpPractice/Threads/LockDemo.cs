@@ -4,19 +4,20 @@ using System.Threading;
 
 namespace Threads
 {
-    public static class LockDemo
+    public class LockDemo
     {
-        private static object _object = new object();
-        public static void Run()
+        private  object _object = new object();
+        public  void Run()
         {
             for (int i = 0; i < 10; i++)
             {
-                ThreadStart start = new ThreadStart(TestLock);
-                new Thread(start).Start();
+                ThreadStart start =new ThreadStart(TestLock);
+                var thread = new Thread(start);
+                thread.Start();
             }
         }
 
-        private static void TestLock()
+        private  void TestLock()
         {
             lock (_object)
             {

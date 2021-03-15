@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TPL
+namespace DataStructure
 {
     public class GenericCollection
     {
@@ -27,9 +27,9 @@ namespace TPL
             dict.Append(new KeyValuePair<int, string>(5, "five"));
             dict.Contains(new KeyValuePair<int, string>(5, "five"));
 
+           
             foreach (KeyValuePair<int, string> kv in dict)
             {
-                string s2 = dict[1];
                 Console.WriteLine(kv.Key +" " + kv.Value+ " "+ dict.Count);
             }
 
@@ -43,9 +43,13 @@ namespace TPL
             HashSet<int> hs = new HashSet<int>();
             hs.Add(1);
             hs.Add(2);
+            HashSet<int> hs2 = new HashSet<int>();
+            hs2.Add(1);
+            hs2.Add(3);
+
+            hs.UnionWith(hs2);
+
             hs.Remove(1);
-
-
             foreach(int i in hs)
             {
                 Console.WriteLine(i +" " + hs.Count);
@@ -78,13 +82,13 @@ namespace TPL
 
             #region Stack
 
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
 
             stack.Push(1);
             stack.Push(2);
             stack.Push(3);
             int peek =(int) stack.Peek();
-            for(int i = 0; i < stack.Count; i++)
+            for(int i = 0; i < stack.Count(); i++)
             {
                 Console.WriteLine("Print stack " + stack.Pop());
             }
@@ -133,7 +137,7 @@ namespace TPL
             //}
             foreach (KeyValuePair<int, string> d in sl)
             {
-                Console.WriteLine("prit Sorted List" + d.Key + " " + d.Value + " " + ht.Count);
+                Console.WriteLine("prit Sorted List" + d.Key + " " + d.Value + " " + sl.Count);
             }
             if (sl.ContainsKey(1))
             {
