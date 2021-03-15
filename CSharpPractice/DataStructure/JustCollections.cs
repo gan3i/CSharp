@@ -17,7 +17,7 @@ namespace DataStructure
 
             ht[1] = "Hey1";
             ht[2] = "Hey2";
-            ht["s"] = "Hey2";
+            ht["s"] = 1;
             ht.Remove(1);
             ht.Add(3, "Hey");
             foreach (DictionaryEntry d in ht)
@@ -52,7 +52,7 @@ namespace DataStructure
 
             foreach(object o in q)
             {
-
+               
             }
 
             #endregion
@@ -62,7 +62,7 @@ namespace DataStructure
             stk.Push('2');
             object stackTop = stk.Peek();
             top = stk.Pop();
-            int count = stk.Count;
+            int count1 = stk.Count;
 
 
 
@@ -72,10 +72,16 @@ namespace DataStructure
             list_name.Add(2, "Hi");
             list_name.Add(1, "Hkllo");
 
+            foreach(DictionaryEntry c  in list_name)
+            {
+                
+            }
+
 
             ArrayList arrlst = new ArrayList();
             arrlst.Add(2);
             //arrlst.Add(1);
+            int ax = arrlst.Count;
 
             foreach (int a in arrlst)
             {
